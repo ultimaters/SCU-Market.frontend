@@ -1,0 +1,178 @@
+<html lang="zh-CN"><head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="./js/jquery-1.7.min.js"></script><style type="text/css"></style>
+<title>川大二手市场</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content=""> 
+
+    <!-- Le styles -->
+    
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap/main_test.css">  	<link rel="stylesheet" type="text/css" href="./css/bootstrap/bootstrap.css"> 
+
+    <link rel="stylesheet" type="text/css" href="./css/personal.css">    <link rel="stylesheet" type="text/css" href="./css/product.css">    <link rel="stylesheet" type="text/css" href="./css/message.css">    <link rel="stylesheet" type="text/css" href="./css/bootstrap/bootstrap-responsive.css">    <link rel="stylesheet" type="text/css" href="./css/bootstrap/todc-bootstrap.css">    
+    <link rel="stylesheet" type="text/css" href="./css/index.css">   
+    <link rel="stylesheet" type="text/css" href="./css/customize.css">   
+    <link rel="stylesheet" type="text/css" href="./css/product_list.css">   
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src=".../js/html5shiv.js"></script>
+    <![endif]-->
+
+  <style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/./img/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/./img/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/./img/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/./img/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/./img/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style></head>
+
+  <body>
+
+    <div class="navbar navbar-googlebar">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <b><a class="brand" href="#">川大二手</a></b>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+			<li class="divider-vertical"></li>
+				<li>
+				<a href="/index.php?r=site/index">首页</a>
+				</li>
+          
+            <li>
+             <a href="/index.php?r=user/profile">个人中心<em style="color: red; float: right; font-size: 24px;" id="head_num_news"></em></a>
+            </li>
+            <li> <a href="/index.php?r=site/logout">
+              登出(banana)</a> 
+            </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+	  
+    </div>
+
+	<div class="container">
+	<div class="row-fluid" id="head_bar">
+		<div id="logo-wrap">
+		<h1 id="logo">川大二手</h1>
+    <span id="scumarket-purpose">
+      <b><a href="/index.php?r=site/index">scumarket.com</a></b>做川大最好的二手市场
+    </span>
+		</div>
+		
+			 <div id="search-div">      
+        <form id="search-form" class="form-search" method="get">
+<div style="display:none"><input type="hidden" value="search/product" name="r"></div> 
+						  <select  id="hello" name="Product[campus_id]">
+<option value="" selected="selected">全校</option>
+<option value="1">江安</option>
+<option value="2">望江</option>
+<option value="3">华西</option>
+</select>						 <input class="input-mudium" placeholder="请输入关键词" autofocus="autofocus" name="Product[search_text]" id="Product_search_text" type="text" style="height:auto">
+
+
+						 
+					     <input type="submit" class="btn" id="search-btn" value="搜索">
+
+				 </form>				 
+			</div>
+			<div id="public">
+			<form action="#" id="campus_form" class="form-search" method="get">
+
+			<button class="btn   btn-danger" id="public-btn" type="button"><i class="icon-pencil icon-white"></i>发布物品
+
+			
+			</button>
+			
+			</form>
+			</div> 
+		 
+	</div>
+
+
+
+
+	<div id="content">
+ <div class="container">
+	 
+  <div class="row-fluid">
+	<div id="type"></div>
+	<div id="recommend"></div>
+	<div id="notice"></div>
+	<fieldset id="" class="book_area"> 
+				<legend>最新发布</legend>
+
+		<ul class="thumbnails">
+
+			
+							<li>
+						<div class="thumbnail product_item">
+							<div class="product-img center ">
+								<a href="index.html">
+                                         
+									<img src="./img/no_picture.gif" alt="">
+								</a>
+							</div>
+								<a href="index.html">
+									<h5>1</h5>
+								</a>
+ 
+								<div class="product_search_price pull-right">
+									 ￥1.00								</div>
+								
+						</div>
+				</li>	
+			
+			
+
+
+							   
+		</ul>			
+
+	</fieldset>
+	
+		
+	<fieldset class="recommend_area">
+		<legend>最新通知</legend>
+		<p>欢迎加入川大二手市场交流群：<b>248351877</b></p>
+				<p>已经有71414人加入川大二手市场</p>
+		<p>37人通过人人登陆</p>
+		<p>川大二手市场上面现一共有5个物品</p>
+		<!-- <p>至今现共有**个物品成功交易</p> -->
+
+ 	 
+ 	</fieldset>
+
+ 
+ </div><!-- class="row-fluid" -->
+ 
+ 
+
+    </div> <!-- /container -->
+</div><!-- content -->
+
+</div>
+	<div class="clear"></div>
+
+<footer class="footer bottombar">
+      <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Code under <a href="http://www.bootcss.com/" target="_blank">Bootstrap</a> and <a href="http://www.yiiframework.com/" target="_blank">
+Yii </a> Frameworak.</p>
+         <p>Designed and built with all the love in the world by scumarket Team</p>
+       
+        <p>© 2012 - 2014 scumarket Team 蜀ICP备14002423号-1</p>
+        
+        <p>Contact us: fucus@qq.com</p>
+        
+        
+        <ul class="footer-links">
+          <li><a href="http://sae.sina.com.cn" target="_blank"><img src="./img/sae.gif" class="vm" alt="新浪云服务器"></a></li>
+           
+        </ul>
+      </div>
+    </footer>
+ 	  	
+  
+</body></html>

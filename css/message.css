@@ -1,0 +1,32 @@
+#welcome {
+	height: 30px;
+	margin-top: 10px;
+}
+#title {
+	width: 40px;
+	margin-left: 20px;
+	font-size: 20px;
+}
+#mes-form, #mes-head {
+	height: 30px;
+}
+#mes-form {
+	width: 200px;
+}
+#mes-head {
+	width: 730px;
+	height: 30px;
+}
+#mes-head th {
+	border-left: dotted 1px #c1c8d2;
+	text-align: left;
+}
+.check {
+	width: 30px;
+}
+.from {
+	width: 200px;
+}
+.content {
+	width: 300px;
+}

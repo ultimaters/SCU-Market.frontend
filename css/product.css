@@ -1,0 +1,54 @@
+.row-product {
+	width: 730px;
+	height: 30px;
+	text-align: center;
+	background-color: #dedee0;
+}
+.title,.price,.public-time,.status {
+	border-left: dashed 1px black;
+}
+.baobei {
+	
+	width: 17.14286%;   /* 120px  */
+}
+.price ,#price{
+	width: 17.14286%;
+}
+.public-time ,.status,#public-time,#status{
+	width: 14.28571%;   /*  100px  */
+}
+#img-baobei {
+	width: 17.14286%;
+	height: 14.28571%;
+}
+.product-view-item {
+	
+}
+.product-view {
+	margin: 10px 15px 0 15px;
+	line-height: 20px;
+}
+
+.product-img{
+	width:210px;
+	height: 210px;
+}
+#email-img {
+	float: left;
+	margin-top: 20px;
+	width: 48px;
+	height: 200px ;
+}
+
+.img-email0 {
+	margin-top: 30px;
+}
+.img-email1 {
+	margin-top: 35px;
+}
+
+
+
+
+
+
